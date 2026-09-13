@@ -19,7 +19,7 @@ const options = {
   onClose(selectedDates) {
       console.log(selectedDates[0]);
       userSelectedDate = selectedDates[0];
-      if (userSelectedDate < new Date()) {
+      if (userSelectedDate <= new Date()) {
         iziToast.error({message: 'Please choose a date in the future', position: 'topRight'});
         startBtn.disabled = true;
       }
